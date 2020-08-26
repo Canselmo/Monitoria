@@ -92,3 +92,9 @@ void preOrdem(No* NoRaiz) {
 	preOrdem(NoRaiz->esq);
 	preOrdem(NoRaiz->dir);
 }
+void emOrdem(No* NoRaiz) {
+	if (NoRaiz == NULL) return;
+	preOrdem(NoRaiz->esq);
+	printf("- %d ", NoRaiz->valor);
+	preOrdem(NoRaiz->dir);
+}
